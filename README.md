@@ -115,13 +115,13 @@ Create wallet:
 btcli wallet create \
   --wallet.name Diego \
   --hotkey Diego_work \
-  --network test
+  --network test 
 
 Check balance:
 
 btcli wallet balance \
   --wallet.name Diego \
-  --network test
+  --network test```
 
 ⚠️ Ensure your wallet has testnet TAO before creating a subnet.
 
