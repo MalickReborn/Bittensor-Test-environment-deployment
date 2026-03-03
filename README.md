@@ -141,8 +141,10 @@ btcli wallet create \
   --network test
 ```
 [![Screenshot-from-2026-03-03-14-21-29.png](https://i.postimg.cc/YqCscgfJ/Screenshot-from-2026-03-03-14-21-29.png)](https://postimg.cc/yW2PcDGP)
- FOr this task i have funded my wallet using a [faucet for test tokens](https://app.minersunion.ai/testnet-faucet)
-Check balance:
+
+For this task i have funded my wallet using a [faucet for test tokens](https://app.minersunion.ai/testnet-faucet).
+
+Check the wallet balance:
 
 ```
 btcli wallet balance \
