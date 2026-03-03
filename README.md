@@ -122,6 +122,11 @@ docker system prune -a --volumes -f
 ```
 ./scripts/run/subtensor.sh -e docker --network testnet --node-type lite
 ```
+[![dockernod-tocreate.png](https://i.postimg.cc/0jw17wW3/dockernod-tocreate.png)](https://postimg.cc/sGsLrvR9)
+
+Check if the container is correctly running
+
+[![dockernoderunning.png](https://i.postimg.cc/bJFqx8zP/dockernoderunning.png)](https://postimg.cc/njB8xyjS)
 
 Your local test node should now be running.
 
@@ -135,7 +140,8 @@ btcli wallet create \
   --hotkey Diego_work \
   --network test
 ```
-
+[![Screenshot-from-2026-03-03-14-21-29.png](https://i.postimg.cc/YqCscgfJ/Screenshot-from-2026-03-03-14-21-29.png)](https://postimg.cc/yW2PcDGP)
+ FOr this task i have funded my wallet using a [faucet for test tokens](https://app.minersunion.ai/testnet-faucet)
 Check balance:
 
 ```
@@ -143,6 +149,7 @@ btcli wallet balance \
   --wallet.name Diego \
   --network test
 ```
+[![check-balance.png](https://i.postimg.cc/Dwb4mjPS/check-balance.png)](https://postimg.cc/MnqpFY4w)
 
 ⚠️ Ensure your wallet has testnet TAO before creating a subnet.
 
@@ -154,12 +161,16 @@ btcli subnet create \
   --wallet.hotkey Diego_work \
   --network test
 ```
+[![subnet-creation.png](https://i.postimg.cc/7Zp7V8Z0/subnet-creation.png)](https://postimg.cc/QFJH8z5d)
+
+[![Screenshot-from-2026-03-02-17-57-30.png](https://i.postimg.cc/V6XFMs9N/Screenshot-from-2026-03-02-17-57-30.png)](https://postimg.cc/9RFTHhn3)
 
 List subnets:
 
 ```
 btcli subnet list --network test
 ```
+
 
 ### 🔄 Useful Commands
 
