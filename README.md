@@ -173,6 +173,43 @@ List subnets:
 btcli subnet list --network test
 ```
 
+Start emissions on the subnet
+To activate your subnet, beginning emissions and allowing staking, run:
+
+```
+btcli subnet start --netuid 282 --wallet.name Diego --network test
+```
+You can check the emissions using once again:
+```
+btcli subnet list --network test
+```
+Now we have to register the neurons:
+
+We' ll go first with the miner:
+```
+btcli subnet register --netuid 282 --wallet-name test-miner --hotkey test-miner_hotkey --network test
+
+```
+and we follow with the validator:
+```
+btcli subnet register --netuid 282 --wallet-name test-validator --hotkey test-validator_hotkey --network test
+```
+
+we then check everything is done correctly:
+```
+btcli subnet show --netuid 282 --network test
+```
+
+In order to submit weights, the validator has to aquire a work permit. We'll the request a permit by staking assets:
+
+```
+btcli stake add --netuid 2 --wallet-name test-validator --hotkey test-validator_hotkey --partial --network test
+```
+and overview of the validator wallet status
+```
+btcli wallet overview --wallet.name test-validator --network test
+```
+
 
 ### 🔄 Useful Commands
 
@@ -202,6 +239,11 @@ DevOps + Blockchain integration workflow
 ### 🚀 Next Steps
 
 Register neurons
+
+
+btcli wallet transfer --wallet.name Diego --destination test-miner --network test
+
+
 
 Deploy miners / validators
 
