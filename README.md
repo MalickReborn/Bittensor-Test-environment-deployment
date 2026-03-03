@@ -75,36 +75,38 @@ bittensorTraining/
 sudo apt update
 sudo apt install docker.io docker-compose -y
 sudo systemctl enable docker
-sudo systemctl start docker
+sudo systemctl start docker```
 
 Verify:
 
 docker --version
-docker compose version
+docker compose version```
+
 🐍 Python Environment Setup
-mkdir ~/bittensorTraining && cd ~/bittensorTraining
+
+```mkdir ~/bittensorTraining && cd ~/bittensorTraining
 python3 -m venv bt_env
-source bt_env/bin/activate
+source bt_env/bin/activate```
 
 Install dependencies:
 
-pip install bittensor
+```pip install bittensor
 pip install bittensor-cli==9.1.0
-🧠 Run Local Subtensor Node (Testnet)
+🧠 Run Local Subtensor Node (Testnet)```
 
 Clone repository:
 
-git clone https://github.com/opentensor/subtensor.git
-cd subtensor
+```git clone https://github.com/opentensor/subtensor.git
+cd subtensor```
 
 Clean Docker state (optional):
 
-docker compose down --volumes
-docker system prune -a --volumes -f
+```docker compose down --volumes
+docker system prune -a --volumes -f```
 
 Run lite node on testnet:
 
-./scripts/run/subtensor.sh -e docker --network testnet --node-type lite
+```./scripts/run/subtensor.sh -e docker --network testnet --node-type lite```
 
 Your local test node should now be running.
 
@@ -112,38 +114,39 @@ Your local test node should now be running.
 
 Create wallet:
 
-btcli wallet create \
+```btcli wallet create \
   --wallet.name Diego \
   --hotkey Diego_work \
-  --network test 
+  --network test```
 
 Check balance:
 
-btcli wallet balance \
+```btcli wallet balance \
   --wallet.name Diego \
   --network test```
 
 ⚠️ Ensure your wallet has testnet TAO before creating a subnet.
 
 🌐 Create a Subnet
-btcli subnet create \
+```btcli subnet create \
   --subnet-name Reddevil-Shelter \
   --wallet.name Diego \
   --wallet.hotkey Diego_work \
-  --network test
+  --network test```
 
 List subnets:
 
-btcli subnet list --network test
+```btcli subnet list --network test```
+
 🔄 Useful Commands
 
 Deactivate virtual environment:
 
-deactivate
+```deactivate```
 
 Restart Docker node:
 
-docker compose restart
+```docker compose restart```
 🎯 What This Project Demonstrates
 
 Infrastructure deployment using Docker
@@ -168,7 +171,3 @@ Monitor node performance
 
 Deploy on mainnet
 
-🧠 Author
-
-Malick
-DevOps Engineer exploring decentralized AI infrastructure.
