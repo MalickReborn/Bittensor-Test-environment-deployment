@@ -82,7 +82,7 @@ Verify:
 docker --version
 docker compose version```
 
-🐍 Python Environment Setup
+### 🐍 Python Environment Setup
 
 ```mkdir ~/bittensorTraining && cd ~/bittensorTraining
 python3 -m venv bt_env
@@ -94,23 +94,23 @@ Install dependencies:
 pip install bittensor-cli==9.1.0
 🧠 Run Local Subtensor Node (Testnet)```
 
-Clone repository:
+### Clone repository:
 
 ```git clone https://github.com/opentensor/subtensor.git
 cd subtensor```
 
-Clean Docker state (optional):
+### Clean Docker state (optional):
 
 ```docker compose down --volumes
 docker system prune -a --volumes -f```
 
-Run lite node on testnet:
+### Run lite node on testnet:
 
 ```./scripts/run/subtensor.sh -e docker --network testnet --node-type lite```
 
 Your local test node should now be running.
 
-👛 Wallet Management
+### 👛 Wallet Management
 
 Create wallet:
 
@@ -127,7 +127,7 @@ Check balance:
 
 ⚠️ Ensure your wallet has testnet TAO before creating a subnet.
 
-🌐 Create a Subnet
+### 🌐 Create a Subnet
 ```btcli subnet create \
   --subnet-name Reddevil-Shelter \
   --wallet.name Diego \
@@ -138,7 +138,7 @@ List subnets:
 
 ```btcli subnet list --network test```
 
-🔄 Useful Commands
+### 🔄 Useful Commands
 
 Deactivate virtual environment:
 
@@ -147,7 +147,7 @@ Deactivate virtual environment:
 Restart Docker node:
 
 ```docker compose restart```
-🎯 What This Project Demonstrates
+### 🎯 What This Project Demonstrates
 
 Infrastructure deployment using Docker
 
@@ -159,7 +159,7 @@ Subnet provisioning on Bittensor testnet
 
 DevOps + Blockchain integration workflow
 
-🚀 Next Steps
+### 🚀 Next Steps
 
 Register neurons
 
