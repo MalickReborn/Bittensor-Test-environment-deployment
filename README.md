@@ -81,8 +81,10 @@ sudo systemctl start docker
 
 Verify:
 
+```
 docker --version
-docker compose version```
+docker compose version
+```
 
 ### 🐍 Python Environment Setup
 
