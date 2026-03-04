@@ -179,6 +179,8 @@ To activate your subnet, beginning emissions and allowing staking, run:
 ```
 btcli subnet start --netuid 282 --wallet.name Diego --network test
 ```
+[![Screenshot-from-2026-03-03-17-22-38.png](https://i.postimg.cc/d0ZnYBTL/Screenshot-from-2026-03-03-17-22-38.png)](https://postimg.cc/jWKy6ycb)
+
 You can check the emissions using once again:
 ```
 btcli subnet list --network test
@@ -195,6 +197,8 @@ and we follow with the validator:
 btcli subnet register --netuid 282 --wallet-name test-validator --hotkey test-validator_hotkey --network test
 ```
 
+[![Screenshot-from-2026-03-03-17-33-57.png](https://i.postimg.cc/TPsSj1nW/Screenshot-from-2026-03-03-17-33-57.png)](https://postimg.cc/cKQX0s9s)
+
 we then check everything is done correctly:
 ```
 btcli subnet show --netuid 282 --network test
@@ -205,6 +209,9 @@ In order to submit weights, the validator has to aquire a work permit. We'll the
 ```
 btcli stake add --netuid 2 --wallet-name test-validator --hotkey test-validator_hotkey --partial --network test
 ```
+
+[![Screenshot-from-2026-03-03-17-37-10.png](https://i.postimg.cc/mD2xjJn2/Screenshot-from-2026-03-03-17-37-10.png)](https://postimg.cc/d7XStHvz)
+
 and overview of the validator wallet status
 ```
 btcli wallet overview --wallet.name test-validator --network test
